@@ -32,9 +32,8 @@ const obtenerPersonajes = async () => {
         } else {
             const data = await response.json()
             
-            //creamos el archivo personajes.json y le pasamos el contenido data convertido a json 
             fs.writeFileSync('personajes.json', JSON.stringify(data, null, 2));
-            // console.log(fs.readFileSync('personajes.json', 'utf-8'))
+   
             console.log('*******************************Family House Stark*******************************')
             familyHouseStark();
             console.log('*******************************Characters + Nuevo Personaje*******************************')
